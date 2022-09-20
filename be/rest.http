@@ -1,0 +1,118 @@
+# BEGIN::User
+###
+# register user
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "email":"tes@tes.com",
+    "name":"tes",
+    "password":"123456"
+}
+
+###
+# login
+POST http://localhost:3001/api/users/login
+Content-Type: application/json
+
+{
+    "email":"tes@tes.com",
+    "password":"123456"
+}
+###
+# refresh token
+GET http://localhost:3001/api/users/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+# END::USER
+
+# BEGIN::Category
+###
+# get all data category
+GET http://localhost:3001/api/category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+###
+# get category by id
+GET http://localhost:3001/api/category/6317eea613bb44aa8190e199
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+###
+# add category
+POST http://localhost:3001/api/category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+{
+    "cat_nama" :"RSUD Muratara",
+    "cat_status" : true,
+    "cat_desc":"Ini adalah task list rsud muratara"
+}
+
+###
+# update category
+PUT http://localhost:3001/api/category/6317eea613bb44aa8190e199
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+{
+    "cat_status": false
+}
+
+###
+# delete category
+DELETE http://localhost:3001/api/category/6317eea613bb44aa8190e199
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+# END::Category
+
+# BEGIN::LIST
+###
+# get all data list
+GET http://localhost:3001/api/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+###
+# get list by id
+GET http://localhost:3001/api/list/631823c42dbc47d4a345f513
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+###
+# add list
+POST http://localhost:3001/api/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+{
+    "list_nama" :"Penmabahan list",
+    "list_desc":"tes penambahan list",
+    "list_deadline":"2022-09-09 12:00:45",
+    "category":"63180c4788c62c8cd64f7ce2"
+}
+
+###
+# update list
+PUT http://localhost:3001/api/list/631823c42dbc47d4a345f513
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+{
+    "list_nama": "update tes",
+    "list_desc": "ada deh",
+    "list_deadline": "2022-09-09 19:30:45",
+    "category":"63180c4788c62c8cd64f7ce2"
+}
+
+###
+# delete list
+DELETE http://localhost:3001/api/list/631823c42dbc47d4a345f513
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTgwOTBhNDkyMmEwYzdiODMwNTllNCIsImlhdCI6MTY2MjUxOTkzMCwiZXhwIjoxNjY1MTExOTMwfQ.NohyBIAy65SICIV0WU7xnvHM6dvCd9SMwswd4eOPQk8
+
+# END::LIST
