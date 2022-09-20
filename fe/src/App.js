@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import { HomePageTitle, LoginPageTitle, RegisterPageTitle } from "./app/const";
 import { AuthRoute, PrivateRoute } from "./components";
 import { HomePage, LoginPage, RegisterPage } from "./pages";
