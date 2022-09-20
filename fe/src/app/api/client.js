@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const baseURL = "";
+const baseURL = "http://localhost:3001";
 
-export const client = ({ token = "" }) =>
+export const client = (data = { token: "" }) =>
   axios.create({
     baseURL,
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${data.token}`,
     },
   });

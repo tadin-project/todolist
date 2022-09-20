@@ -1,7 +1,7 @@
 # BEGIN::User
 ###
 # register user
-POST http://localhost:3001/api/users
+POST http://localhost:3001/api/users/register
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ###
 # login
-POST http://localhost:3001/api/users/login
+POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
