@@ -1,7 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HomePageTitle, LoginPageTitle, RegisterPageTitle } from "./app/const";
+import {
+  HomePageTitle,
+  KategoriPageTitle,
+  LoginPageTitle,
+  RegisterPageTitle,
+} from "./app/const";
 import { AuthRoute, PrivateRoute } from "./components";
-import { HomePage, LoginPage, RegisterPage } from "./pages";
+import { HomePage, KategoriPage, LoginPage, RegisterPage } from "./pages";
 
 function App() {
   return (
@@ -28,6 +33,14 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path={KategoriPageTitle}
+          element={
+            <PrivateRoute>
+              <KategoriPage />
             </PrivateRoute>
           }
         />

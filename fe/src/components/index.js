@@ -1,5 +1,10 @@
-// navigator
-import PrivateRoute from "./navigator/PrivateRoute";
-import AuthRoute from "./navigator/AuthRoute";
+// core
+import CorePage from "./CorePage";
 
-export { PrivateRoute, AuthRoute };
+// navigator
+import AuthRoute from "./navigator/AuthRoute";
+import Navbar from "./navigator/Navbar";
+import PrivateRoute from "./navigator/PrivateRoute";
+import Sidebar from "./navigator/Sidebar";
+
+export { CorePage, AuthRoute, Navbar, PrivateRoute, Sidebar };

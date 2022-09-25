@@ -1,12 +1,12 @@
 import React from "react";
 import { CorePage } from "../components";
 
-const HomePage = () => {
+const KategoriPage = () => {
   return (
     <CorePage>
-      <div>Homepage</div>
+      <div>Kategori</div>
     </CorePage>
   );
 };
 
-export default HomePage;
+export default KategoriPage;

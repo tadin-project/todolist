@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { client } from "../../app/api/client";
+import { LoginPageTitle } from "../../app/const";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -108,9 +109,9 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-slate-100">
+    <div className="flex justify-center items-center bg-slate-100 h-screen w-screen">
       {/* begin::kotak */}
-      <div className="bg-white rounded-3xl shadow-lg py-6 px-6 my-6">
+      <div className="bg-white rounded-3xl shadow-lg py-6 px-6 my-6 w-1/3">
         <div className="card-header py-2 px-4 border-b-2 border-slate-300 rounded-sm">
           <h1 className="font-bold text-2xl text-center">Register</h1>
         </div>
@@ -175,7 +176,7 @@ const RegisterPage = () => {
           </form>
           <p className="text-sm mt-3">
             Have an account? Please{" "}
-            <Link className="text-blue-500" to="/">
+            <Link className="text-blue-500" to={LoginPageTitle}>
               login
             </Link>
           </p>
